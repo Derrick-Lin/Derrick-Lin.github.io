@@ -40,3 +40,12 @@ nav a {
 nav a:hover{
   border-bottom: 1px solid black;
 }
+form {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+}
+#confirmation_msg{
+  height: 100px;
+  background-color: lightblue;
+}

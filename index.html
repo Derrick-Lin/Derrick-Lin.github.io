@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Derrick's Resume</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
 
   <body>
@@ -14,9 +15,11 @@
       <li><a href="projects.html">Projects</a></li>
     </ul>
     </nav>
-    <h1>Derrick Lin</h1>
+    <h1 id="name">Derrick Lin</h1>
     <hr width="70%">
     <img src="DerrickLin_Picture.jpg" alt="Picture of Derrick Lin" title="Derrick Lin" id="derrick">
+    <button id="remove">REMOVE my picture</button>
+    <button id="add">ADD my picture</button>
     <h3>Biography</h3>
     <p>This is Derrick Lin's resume. Derrick is currently a project manager at BigCommerce, a leading ecommerce platform for mid-market retailers. He enjoys traveling, training mixed martial arts, fitness and nutrition, investing in real estate, and vacuuming. </p>
     <hr>
@@ -27,6 +30,32 @@
     </ul>
     <a href="https://www.linkedin.com/in/derrick-lin-79731b24" target="_blank">LinkedIn</a>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/tRYdFNuNGPw" frameborder="0" allowfullscreen></iframe>
+
     <button><a href="mailto:drklin88Gmail.com">Click to send me an email</a></button>
+
+    <form id="mailing_list">
+      <label>First Name</label><br>
+      <input name="first_name"
+      type="text"><br>
+
+    <label>Email address</label><br>
+    <input name="email_address" type="text"><br>
+
+    <input type="checkbox" name="mail"
+    value="yes">Do you want to be on our mailing list?<br>
+
+    <label>How do we know each other?</label><br>
+    <select name="known">
+      <option value="friend">We're friends</option>
+      <option value="recruiter">I'm a recruiter</option>
+      <option value="unknown">I don't know you yet</option>
+    </select><br>
+  </form>
+
+  <div id="confirmation_msg"></div>
+
+  <button onclick="infoSubmit()">Submit</button>
+
   </body>
+  <script src="app.js"></script>
 </html>
